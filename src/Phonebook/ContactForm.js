@@ -27,7 +27,11 @@ const ContactForm = ({ contacts, onSubmit }) => {
   const makeSubmit = event => {
     event.preventDefault();
 
-    if (contacts.find(contact => contact.name === name)) {
+    if (
+      contacts.find(
+        contact => contact.name.toLowerCase() === name.toLowerCase(),
+      )
+    ) {
       alert(`${name} is already in contacts`);
       reset();
       return;

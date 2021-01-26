@@ -2,8 +2,6 @@ import { combineReducers } from 'redux';
 import { createReducer } from '@reduxjs/toolkit';
 import actions from './actions';
 
-console.log(actions);
-
 const contacts = createReducer(
   [
     { id: 'id-1', name: 'Rosie Simpson', number: '459-12-56' },
